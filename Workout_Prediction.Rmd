@@ -1,6 +1,7 @@
 ---
 title: "Workout Prediction"
-output: html_document
+output:
+  html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -181,7 +182,7 @@ sum(finalpred==testing$classe)/length(testing$classe)
 ```{r, cache=TRUE, echo=FALSE}
 acc<-sum(finalpred==testing$classe)/length(testing$classe)
 ```
-So we have `r acc` accuracy, which doesn't sound bad :)
+So we have `r acc` accuracy, which doesn't sound bad :) (Or `r 1-acc` out-of sample error.)
 
 ## Test Set for the Quiz
 I don't know whether this should be in here, but since I have to do it anyway, I'll just include it.

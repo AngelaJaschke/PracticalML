@@ -202,7 +202,7 @@ sum(finalpred==testing$classe)/length(testing$classe)
 
     ## [1] 0.9841958
 
-So we have 0.9841958 accuracy, which doesn't sound bad :)
+So we have 0.9841958 accuracy, which doesn't sound bad :) (Or 0.0158042 out-of sample error.)
 
 Test Set for the Quiz
 ---------------------
