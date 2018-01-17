@@ -1,7 +1,9 @@
 ---
 title: "Workout Prediction"
 output:
-  html_document
+  md_document:
+    variant: markdown_github
+  #html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -51,7 +53,7 @@ quiztesting<-quiztesting[,-c(1,3,4,5)]
 sum(is.na(quiztesting))
 ```
 
-Since the testing set (that is used for the quiz) is really small, we will set aside a larger set to estimate the out of sample error of the final model. We will use cross-validation built into the algorithms, so we don't manually set up a validation dataset.
+Since the testing set (that is used for the quiz) is really small, we will set aside a larger set to estimate the out of sample error of the final model. We will use cross-validation built into the algorithms, so we don't manually set up a validation dataset. (The testing set for the out of sample error could be called a validation set too though.)
 
 ```{r}
 inTrain<-createDataPartition(y=cleaned$classe,p=0.8,list=FALSE)
